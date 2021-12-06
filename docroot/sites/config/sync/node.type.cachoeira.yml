@@ -1,0 +1,17 @@
+uuid: a0f1990a-0fb2-4aa7-82a4-e3357482de6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Cachoeira
+type: cachoeira
+description: 'Conteúdo do tipo cachoeira. Clique para inserir uma cachoeira.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

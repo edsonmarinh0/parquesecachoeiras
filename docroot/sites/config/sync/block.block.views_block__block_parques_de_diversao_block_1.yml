@@ -1,0 +1,29 @@
+uuid: 002bd195-249e-400c-903b-21adce28bf22
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.block_parques_de_diversao
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__block_parques_de_diversao_block_1
+theme: bootstrap
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:block_parques_de_diversao-block_1'
+settings:
+  id: 'views_block:block_parques_de_diversao-block_1'
+  label: 'Parques de diversão:'
+  provider: views
+  label_display: visible
+  views_label: 'Parques de diversão:'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

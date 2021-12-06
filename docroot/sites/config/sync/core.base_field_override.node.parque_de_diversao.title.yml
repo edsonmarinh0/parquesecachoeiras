@@ -1,0 +1,18 @@
+uuid: eb48e609-c14c-4735-8e3c-fdf8d9705789
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.parque_de_diversao
+id: node.parque_de_diversao.title
+field_name: title
+entity_type: node
+bundle: parque_de_diversao
+label: 'Nome do parque'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

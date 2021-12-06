@@ -1,0 +1,91 @@
+uuid: cb8090ed-9764-443c-8c22-15e3ab66ce93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cachoeira.body
+    - field.field.node.cachoeira.comment
+    - field.field.node.cachoeira.field_cidade
+    - field.field.node.cachoeira.field_image
+    - field.field.node.cachoeira.field_pais
+    - node.type.cachoeira
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Teaser layout'
+          column_widths: 33-67
+          context_mapping: {  }
+        components:
+          dcef0c89-3abd-4fae-857f-a1ad3046f95c:
+            uuid: dcef0c89-3abd-4fae-857f-a1ad3046f95c
+            region: first
+            configuration:
+              id: 'field_block:node:cachoeira:field_image'
+              label: Imagem
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: medium
+                  image_link: content
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          78fd04c1-f3bf-415d-8c24-4d605d3817af:
+            uuid: 78fd04c1-f3bf-415d-8c24-4d605d3817af
+            region: second
+            configuration:
+              id: 'field_block:node:cachoeira:body'
+              label: 'Sobre a cachoeira'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.cachoeira.teaser
+targetEntityType: node
+bundle: cachoeira
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment: true
+  field_cidade: true
+  field_image: true
+  field_pais: true

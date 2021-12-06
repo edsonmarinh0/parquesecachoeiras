@@ -1,0 +1,91 @@
+uuid: 7798c4f9-de06-4bdf-85a5-d1fcff0f6c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.parque_de_diversao.body
+    - field.field.node.parque_de_diversao.comment
+    - field.field.node.parque_de_diversao.field_cidade
+    - field.field.node.parque_de_diversao.field_image
+    - field.field.node.parque_de_diversao.field_pais
+    - node.type.parque_de_diversao
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Teaser layout'
+          column_widths: 33-67
+          context_mapping: {  }
+        components:
+          445456b8-f0c9-4d78-afc4-1293e1f7041a:
+            uuid: 445456b8-f0c9-4d78-afc4-1293e1f7041a
+            region: first
+            configuration:
+              id: 'field_block:node:parque_de_diversao:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: medium
+                  image_link: content
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          e5227ba9-a8f7-4231-ada6-df0eeae1732f:
+            uuid: e5227ba9-a8f7-4231-ada6-df0eeae1732f
+            region: second
+            configuration:
+              id: 'field_block:node:parque_de_diversao:body'
+              label: 'Sobre o parque'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.parque_de_diversao.teaser
+targetEntityType: node
+bundle: parque_de_diversao
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment: true
+  field_cidade: true
+  field_image: true
+  field_pais: true

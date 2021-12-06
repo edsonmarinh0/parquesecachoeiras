@@ -1,0 +1,194 @@
+uuid: 2e0c3082-8afa-42fd-b12a-3328e496ed2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.parque_de_diversao.body
+    - field.field.node.parque_de_diversao.comment
+    - field.field.node.parque_de_diversao.field_cidade
+    - field.field.node.parque_de_diversao.field_image
+    - field.field.node.parque_de_diversao.field_pais
+    - node.type.parque_de_diversao
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+  theme:
+    - bootstrap_barrio
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: barrio_cardbasic
+        layout_settings:
+          label: 'Image card layout'
+          context_mapping: {  }
+        components:
+          d0a74e26-da7e-4889-ab02-a843baa8e449:
+            uuid: d0a74e26-da7e-4889-ab02-a843baa8e449
+            region: first
+            configuration:
+              id: 'field_block:node:parque_de_diversao:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: wide
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Body content layout'
+          context_mapping: {  }
+        components:
+          0c41e4d0-9957-4c78-b786-5340be768adb:
+            uuid: 0c41e4d0-9957-4c78-b786-5340be768adb
+            region: content
+            configuration:
+              id: 'field_block:node:parque_de_diversao:body'
+              label: 'Sobre o parque'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Taxonomy layout'
+          column_widths: 50-50
+          context_mapping: {  }
+        components:
+          48a49366-3910-4e25-97be-c690e30054c4:
+            uuid: 48a49366-3910-4e25-97be-c690e30054c4
+            region: first
+            configuration:
+              id: 'field_block:node:parque_de_diversao:field_pais'
+              label: País
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          022ace28-7013-4a39-a699-e77aeab0f3f9:
+            uuid: 022ace28-7013-4a39-a699-e77aeab0f3f9
+            region: second
+            configuration:
+              id: 'field_block:node:parque_de_diversao:field_cidade'
+              label: Cidade
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Comment layout'
+          context_mapping: {  }
+        components:
+          8bf3eab3-6832-4882-b07e-7bec85dc9fea:
+            uuid: 8bf3eab3-6832-4882-b07e-7bec85dc9fea
+            region: content
+            configuration:
+              id: 'field_block:node:parque_de_diversao:comment'
+              label: Comments
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.parque_de_diversao.full
+targetEntityType: node
+bundle: parque_de_diversao
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cidade:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pais:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment: true

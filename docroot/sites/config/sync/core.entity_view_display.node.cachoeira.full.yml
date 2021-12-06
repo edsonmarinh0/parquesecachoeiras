@@ -1,0 +1,190 @@
+uuid: c901cdcf-66e6-4eaa-9f4b-00922a558b47
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.cachoeira.body
+    - field.field.node.cachoeira.comment
+    - field.field.node.cachoeira.field_cidade
+    - field.field.node.cachoeira.field_image
+    - field.field.node.cachoeira.field_pais
+    - node.type.cachoeira
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+  theme:
+    - bootstrap_barrio
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: barrio_cardbasic
+        layout_settings:
+          label: 'Image card layout'
+          context_mapping: {  }
+        components:
+          69eba5bc-b3b2-434b-a75f-695f3c8edd15:
+            uuid: 69eba5bc-b3b2-434b-a75f-695f3c8edd15
+            region: first
+            configuration:
+              id: 'field_block:node:cachoeira:field_image'
+              label: Imagem
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: wide
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Body content layout'
+          context_mapping: {  }
+        components:
+          55df9165-2ac4-4419-bbcb-b88a388bff32:
+            uuid: 55df9165-2ac4-4419-bbcb-b88a388bff32
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeira:body'
+              label: 'Sobre a cachoeira'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Taxonomy layout'
+          column_widths: 50-50
+          context_mapping: {  }
+        components:
+          8d4c5f2e-f419-4574-b387-4a7d16f3fb3a:
+            uuid: 8d4c5f2e-f419-4574-b387-4a7d16f3fb3a
+            region: first
+            configuration:
+              id: 'field_block:node:cachoeira:field_pais'
+              label: País
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          e1c01776-1b38-46bd-a890-fdf6d713453c:
+            uuid: e1c01776-1b38-46bd-a890-fdf6d713453c
+            region: second
+            configuration:
+              id: 'field_block:node:cachoeira:field_cidade'
+              label: Cidade
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Comment layout'
+          context_mapping: {  }
+        components:
+          ced5f254-2665-46be-a86b-d78958d060f2:
+            uuid: ced5f254-2665-46be-a86b-d78958d060f2
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeira:comment'
+              label: Comments
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.cachoeira.full
+targetEntityType: node
+bundle: cachoeira
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cidade:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pais:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  comment: true
+  links: true

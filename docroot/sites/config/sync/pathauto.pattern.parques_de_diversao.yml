@@ -1,0 +1,22 @@
+uuid: a3f4901c-076c-4c6d-aed9-df6537f78a7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: parques_de_diversao
+label: 'parques de diversao'
+type: 'canonical_entities:node'
+pattern: 'parques-de-diversao/[node:title]'
+selection_criteria:
+  59aba879-94cd-4354-986c-7941017b9db6:
+    id: node_type
+    bundles:
+      parque_de_diversao: parque_de_diversao
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 59aba879-94cd-4354-986c-7941017b9db6
+selection_logic: and
+weight: -5
+relationships: {  }

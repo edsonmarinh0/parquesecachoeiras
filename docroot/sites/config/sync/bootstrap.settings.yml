@@ -1,0 +1,38 @@
+schemas:
+  bootstrap: 8000
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+favicon:
+  mimetype: image/svg+xml
+  path: 'public://campground-solid_1.svg'
+  url: 'http://parques-e-cachoeiras.ddev.site/themes/contrib/bootstrap/favicon.ico'
+  use_default: false
+table_responsive: '-1'
+cdn_theme: simplex
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
+logo:
+  path: 'public://campground-solid_0.png'
+  url: ''
+  use_default: false
+image_shape: img-rounded
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+navbar_position: fixed-top
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true

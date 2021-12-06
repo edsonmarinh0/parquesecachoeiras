@@ -1,0 +1,29 @@
+uuid: c796d634-c396-4159-9eab-f77f31b0a635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pais
+    - node.type.parque_de_diversao
+    - taxonomy.vocabulary.pais
+id: node.parque_de_diversao.field_pais
+field_name: field_pais
+entity_type: node
+bundle: parque_de_diversao
+label: País
+description: 'País a qual a atração pertence.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pais: pais
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

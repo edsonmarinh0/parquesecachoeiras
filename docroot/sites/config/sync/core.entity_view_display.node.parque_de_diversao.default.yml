@@ -1,0 +1,69 @@
+uuid: 668deb22-3b68-4bb1-968c-ddad9a9b8f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.parque_de_diversao.body
+    - field.field.node.parque_de_diversao.comment
+    - field.field.node.parque_de_diversao.field_cidade
+    - field.field.node.parque_de_diversao.field_image
+    - field.field.node.parque_de_diversao.field_pais
+    - node.type.parque_de_diversao
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.parque_de_diversao.default
+targetEntityType: node
+bundle: parque_de_diversao
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_cidade:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pais:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

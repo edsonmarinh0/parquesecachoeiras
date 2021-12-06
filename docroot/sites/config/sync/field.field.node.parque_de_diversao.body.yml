@@ -1,0 +1,23 @@
+uuid: 45cb8ca5-4cbd-4232-9ca4-fe75e650beaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.parque_de_diversao
+  module:
+    - text
+id: node.parque_de_diversao.body
+field_name: body
+entity_type: node
+bundle: parque_de_diversao
+label: 'Sobre o parque'
+description: 'Descrição sobre o Parque de diversão.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
