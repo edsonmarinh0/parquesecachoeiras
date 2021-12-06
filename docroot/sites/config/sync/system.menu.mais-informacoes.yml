@@ -1,0 +1,8 @@
+uuid: 6906baa1-593b-4c3d-b873-c7325a2498da
+langcode: en
+status: true
+dependencies: {  }
+id: mais-informacoes
+label: 'Mais informações'
+description: 'Informações sobre quem somos e nossa política'
+locked: false

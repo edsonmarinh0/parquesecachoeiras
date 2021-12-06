@@ -1,0 +1,25 @@
+uuid: 540483c6-6634-4a97-8e5e-4d4d9b2ad57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mais-informacoes
+  module:
+    - system
+  theme:
+    - bootstrap
+id: maisinformacoes
+theme: bootstrap
+region: footer
+weight: -8
+provider: null
+plugin: 'system_menu_block:mais-informacoes'
+settings:
+  id: 'system_menu_block:mais-informacoes'
+  label: 'Mais informações'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

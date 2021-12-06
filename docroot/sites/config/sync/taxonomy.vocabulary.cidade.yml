@@ -1,0 +1,8 @@
+uuid: e4f82c45-9dd8-45a4-95fe-f95c255e11cb
+langcode: en
+status: true
+dependencies: {  }
+name: Cidade
+vid: cidade
+description: 'Cidade onde a atração localiza-se.'
+weight: 0

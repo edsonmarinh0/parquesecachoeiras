@@ -1,0 +1,29 @@
+uuid: e78c9c14-58ef-4845-9fbe-6ecede448e9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.mais_cachoeiras
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__mais_cachoeiras_block_1
+theme: bootstrap
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:mais_cachoeiras-block_1'
+settings:
+  id: 'views_block:mais_cachoeiras-block_1'
+  label: 'Cachoeiras:'
+  provider: views
+  label_display: visible
+  views_label: 'Cachoeiras:'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

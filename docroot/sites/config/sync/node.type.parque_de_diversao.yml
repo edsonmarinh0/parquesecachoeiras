@@ -1,0 +1,17 @@
+uuid: a43a7f41-8e88-42fb-9892-428ab1ea7bcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Parque de diversão'
+type: parque_de_diversao
+description: 'Conteúdo do tipo Parque de diversão.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

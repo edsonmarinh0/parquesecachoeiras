@@ -1,0 +1,29 @@
+uuid: 3ea66ab5-389b-478a-9ee8-75ef47be2233
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cidade
+    - node.type.parque_de_diversao
+    - taxonomy.vocabulary.cidade
+id: node.parque_de_diversao.field_cidade
+field_name: field_cidade
+entity_type: node
+bundle: parque_de_diversao
+label: Cidade
+description: 'Cidade a qual a atração pertence.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cidade: cidade
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
